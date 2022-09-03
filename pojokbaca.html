@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pojok Baca</title>
+		<link rel="icon" href="assets/image/logo.png" />
+		<link rel="stylesheet" href="assets/style/style.css" />
+	</head>
+	<body>
+		<div class="popupAlert"></div>
+		<header>
+			<div class="jumbotron" id="jumbotron">
+				<img src="assets/image/rakBuku.jpg" alt="Gambar Rak Buku" />
+				<span class="filter">
+					<div class="tagline">
+						<h1>📚 Pojok Baca</h1>
+						<h2>Alihkan rak bukumu kedalam bentuk Digital menggunakan Website <span> Pojok Baca</span></h2>
+					</div>
+				</span>
+			</div>
+			<nav class="navigasi">
+				<a class="branded" href="#jumbotron"><h2 class="brand">📚Pojok Baca</h2></a>
+				<ul class="list-menu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#content">Content</a></li>
+					<li><a href="#about">About Creator</a></li>
+				</ul>
+				<div class="humburgerMenu">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<div id="containerPopupConfirm" class="containerPopupConfirm"></div>
+			<article class="home" id="home">
+				<img src="assets/image/buku.jpg" alt="Gambar Background Buku" />
+				<span class="filter">
+					<div class="prolog">
+						<h1>📚 Pojok Baca</h1>
+						<p>
+							Pojok Baca merupakan Bookshelf Apps yang bertujuan untuk membantu para user untuk membuat list atau daftar buku yang sudah dibaca atau membuat list buku yang sedang proses ongoing (belum selesai). Jadi dalam website ini kita
+							bisa memasukan data buku seperti judul buku, nama penulis, tahun terbit buku tersebut, dan cover buku, yang semuanya dikemas dalam bentuk digital.
+						</p>
+						<a href="#form">Lets Get Started</a>
+					</div>
+				</span>
+			</article>
+
+			<article class="main content" id="form">
+				<div class="text-content">
+					<h1 class="heading">📚 Pojok Baca</h1>
+					<h1 class="text">Masukkan data buku anda pada form fild, isi form tersebut sesuai dengan data yang diminta</h1>
+				</div>
+				<form class="container-form" id="inputDataBook">
+					<h1>Input Data Buku Anda</h1>
+					<label for="inputTitleBook">Judul Buku</label>
+					<input id="inputTitleBook" type="text" placeholder="Ayat-ayat Cinta" required />
+
+					<label for="inputAuthor">Nama Penulis</label>
+					<input id="inputAuthor" type="text" placeholder="Habiburrahman El Shirazy" required />
+
+					<label for="inputBookYear">Tahun Terbit</label>
+					<input id="inputBookYear" type="number" placeholder="2004" required />
+
+					<label for="inputBookGenre">Genre Buku</label>
+					<select name="bookGenre" id="inputBookGenre" class="bookGenre" required>
+						<option value="" selected>Pilih Genre Buku...</option>
+						<option value="Pendidikan">Pendidikan</option>
+						<option value="Politik">Politik</option>
+						<option value="Petualangan">Petualangan</option>
+						<option value="Komedia">Komedi</option>
+						<option value="Komedia">Aksi</option>
+						<option value="Komedia">Fiksi Ilmiah</option>
+						<option value="Komedia">Fabel</option>
+						<option value="Anak-anak">Anak-anak</option>
+						<option value="Dewasa">Dewasa</option>
+						<option value="Horor">Horor</option>
+						<option value="Misteri">Misteri</option>
+						<option value="Romantis">Romantis</option>
+						<option value="Thriller">Thriller</option>
+						<option value="Sejarah">Sejarah</option>
+					</select>
+					<label for="inputCoverBook">Link Cover Book</label>
+					<input id="inputCoverBook" type="text" placeholder="https://edit.org/images/dog/book-covers-big-2019101610.jpg" />
+					<div class="input-inline">
+						<label for="inputBookIsComplete">Selesai dibaca</label>
+						<input id="inputBookIsComplete" type="checkbox" />
+					</div>
+					<!-- input submit -->
+					<input id="submitForm" type="submit" value="Submit Kedalam Rak Buku (Ongoing)" />
+				</form>
+			</article>
+
+			<article id="content">
+				<h1>The Bookshelf</h1>
+				<section class="container-card">
+					<div class="card searchbox">
+						<!-- search card -->
+						<div class="search" id="search">
+							<div class="search-input">
+								<input class="search-input" id="searchField" type="search" placeholder="Ketik judul buku disini" />
+								<button id="searchSubmit">
+									<img src="assets/icon/search.svg" alt="icon lup" />
+								</button>
+							</div>
+							<h3 id="searchResult" class="searchResult"></h3>
+							<div class="bookCardSearchField" id="bookCardSearchField"></div>
+						</div>
+					</div>
+
+					<!-- uncompleted bookshelf -->
+					<div class="card card-bookshelf bookShelfList incompleteBookShelfList">
+						<h2>Buku Belum Selesai Dibaca (Ongoing)</h2>
+						<div class="cardBookList uncompleteBook" id="uncompletedBook"></div>
+					</div>
+					<!-- completed bookshelf -->
+					<div class="card card-bookshelf bookShelfList completeBookShelfList">
+						<h2>Buku Sudah Selesai Dibaca (Tamat)</h2>
+						<div class="cardBookList completeBook" id="completedBook"></div>
+					</div>
+				</section>
+			</article>
+		</main>
+
+		<footer>
+			<article class="about" id="about">
+				<section class="profile">
+					<h1>Creator Website <span>📚Pojok Baca</span></h1>
+					<img class="foto" src="assets/image/Zidane.jpg" alt="Image Creator" />
+					<h2>Zidane Novanda Putra</h2>
+					<p>
+						Hallo Reviewer Dicoding, pertama-tama saya ucapkan Terimakasih karena telah berkunjung ke Website buatan saya. Perkenalkan nama saya Zidane Novanda Putra, saya sering dipanggil Zidan. Saya lahir di Kabupaten Purbalingga, Jawa
+						Tengah pada Tanggal 17 November 2003. namun, saya dibesarkan di Kota Cimahi dan hingga sekarang masih berdomisili di Kota Cimahi. Saya merupakan lulusan dari SMK Negeri 1 Kota Cimahi (STM Negeri Pembangunan Bandung) jurusan TPTU
+						(Teknik Pendingin dan Tata Udara) pada Tahun 2022. Walaupun jurusan saya dari TPTU tetapi saya bercita-cita berkarir didunia Teknologi Informasi khususnya di bidang programming, untuk menggapai cita-cita yang saya idamkan saya
+						sangat berusaha dengan belajar dan berlatih secara otodidak dengan mengandalkan Google dan Youtube. Jadi mungkin segitu saja yang saya dapat share mengenai profile saya, Terimakasih.
+					</p>
+					<div class="icon-socmed">
+						<ul type="none" class="icon for-creator">
+							<li>
+								<a href="#">
+									<img src="assets/icon/whatsapp.svg" alt="WhastApp icon" />
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/zidane-novanda-putra-58a9b3227/">
+									<img src="assets/icon/linkedin.svg" alt="LinkedIn icon" />
+								</a>
+							</li>
+							<li>
+								<a href="https://m.facebook.com/zidane.n.putra.3">
+									<img src="assets/icon/facebook.svg" alt="Facebook icon" />
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/znovanda_p/">
+									<img src="assets/icon/instagram.svg" alt="Instagram icon" />
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/icon/twitter.svg" alt="Twitter icon" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</article>
+		</footer>
+		<script src="assets/javascript/apps.js"></script>
+	</body>
+</html>
