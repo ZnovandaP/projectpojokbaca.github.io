@@ -891,7 +891,7 @@ button.remove:hover {
 	padding: 0px 20px;
 	color: #333;
 	font-weight: 500;
-	text-shadow: 0px 0px 1.5px #013532;
+	text-shadow: 0px 0px .5px #013532;
 	line-height: 2rem;
 	text-align: justify;
 }
@@ -1011,7 +1011,7 @@ button.remove:hover {
 	.list-menu.slider {
 		opacity: 1;
 		width: 100vw;
-		height: 40vh;
+		height: 55vh;
 	}
 
 	.container-form {
@@ -1243,6 +1243,10 @@ button.remove:hover {
 
 	.containerButton {
 		gap: 20px;
+	}
+
+	.popupAlert {
+		width: 85%;
 	}
 }
 
